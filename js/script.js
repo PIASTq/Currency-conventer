@@ -1,37 +1,46 @@
-let formElement = document.querySelector(".js-form");
-let countElement = document.querySelector(".js-count");
+{
+    const currencyExchange = (amount, exchangeRate) => {
+        return (amount / exchangeRate).toFixed(2);
+    };
 
-let EUR = 4.8;
-let USD = 4.7;
-let CHF = 4.84;
-let GBP = 5.63;
+    const countToNewCurrency = (event) => {
+        event.preventDefault();
 
-let eurSymbol = "€";
-let usdSymbol = "$";
-let chfSymbol = " CHF";
-let gbpSymbol = "£";
+        const EUR = 4.8;
+        const USD = 4.7;
+        const CHF = 4.84;
+        const GBP = 5.63;
 
-function currencyExchange(amount, exchangeRate) {
-    return (amount / exchangeRate).toFixed(2);
+        const eurSymbol = "€";
+        const usdSymbol = "$";
+        const chfSymbol = " CHF";
+        const gbpSymbol = "£";
+
+        const newCurrencyValue = document.querySelector(".js-newCurrency").value;
+        const plnInputValue = document.querySelector(".js-plnInput").value;
+        const countElement = document.querySelector(".js-count");
+
+        switch (newCurrencyValue) {
+            case "EUR":
+                countElement.innerText = `${currencyExchange(plnInputValue, EUR)}${eurSymbol}`;
+                break;
+            case "USD":
+                countElement.innerText = `${currencyExchange(plnInputValue, USD)}${usdSymbol}`;
+                break;
+            case "CHF":
+                countElement.innerText = `${currencyExchange(plnInputValue, CHF)}${chfSymbol}`;
+                break;
+            case "GBP":
+                countElement.innerText = `${currencyExchange(plnInputValue, GBP)}${gbpSymbol}`;
+                break;
+        }
+    };
+
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+
+        formElement.addEventListener("submit", countToNewCurrency);
+    };
+
+    init();
 }
-
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    let newCurrencyValue = document.querySelector(".js-newCurrency").value;
-    let plnInputValue = document.querySelector(".js-plnInput").value;
-    switch (newCurrencyValue) {
-        case "EUR":
-            countElement.innerText = `${currencyExchange(plnInputValue, EUR)}${eurSymbol}`;
-            break;
-        case "USD":
-            countElement.innerText = `${currencyExchange(plnInputValue, USD)}${usdSymbol}`;
-            break;
-        case "CHF":
-            countElement.innerText = `${currencyExchange(plnInputValue, CHF)}${chfSymbol}`;
-            break;
-        case "GBP":
-            countElement.innerText = `${currencyExchange(plnInputValue, GBP)}${gbpSymbol}`;
-            break;
-    }
-});
