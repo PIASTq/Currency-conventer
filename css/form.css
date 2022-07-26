@@ -1,0 +1,31 @@
+.form__fieldset {
+    background-color: burlywood;
+    border-radius: 10px;
+    padding: 25px;
+    border: 2px solid teal;
+}
+
+.form__legend {
+    background-color: teal;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.form__labelText {
+    display: inline-block;
+    width: 150px;
+}
+
+.form__input {
+    width: 250px;
+}
+
+.form__button {
+    border: none;
+    background-color: teal;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
