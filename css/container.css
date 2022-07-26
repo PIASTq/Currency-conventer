@@ -4,30 +4,30 @@
     padding: 10px;
 }
 
-.container__fieldset {
+.form__fieldset {
     background-color: burlywood;
     border-radius: 10px;
     padding: 25px;
     border: 2px solid teal;
 }
 
-.container__legend {
+.form__legend {
     background-color: teal;
     padding: 10px;
     border-radius: 10px;
     color: white;
 }
 
-.container__labelText {
+.form__labelText {
     display: inline-block;
     width: 150px;
 }
 
-.container__input {
+.form__input {
     width: 250px;
 }
 
-.container__button {
+.form__button {
     border: none;
     background-color: teal;
     color: white;

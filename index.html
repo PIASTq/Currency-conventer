@@ -22,19 +22,19 @@
 <body class="body">
     <div class="container">
         <form class="js-form">
-            <fieldset class="container__fieldset">
-                <legend class="container__legend">Kalkulator walut</legend>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Kalkulator walut</legend>
                 <p>
                     <label>
-                        <span class="container__labelText">Kwota w PLN: </span>
-                        <input class="js-plnInput container__input" required name="amount" type="number" step="0.01"
+                        <span class="form__labelText">Kwota w PLN: </span>
+                        <input class="js-plnInput form__input" required name="amount" type="number" step="0.01"
                             min="1" placeholder="Kwota do zamiany">
                     </label>
                 </p>
                 <p>
                     <label>
-                        <span class="container__labelText">Na jaką walutę:</span>
-                        <select class="js-newCurrency container__input" name="newCurrency" required>
+                        <span class="form__labelText">Na jaką walutę:</span>
+                        <select class="js-newCurrency form__input" name="newCurrency" required>
                             <option selected disabled></option>
                             <option value="USD">Dolar amerykański ($)</option>
                             <option value="EUR">Euro (€)</option>
@@ -47,7 +47,7 @@
                     Kwota po przeliczeniu z PLN: <strong class="js-count">N/A</strong>
                 </p>
                 <p>
-                    <button class="container__button">Przelicz!</button>
+                    <button class="form__button">Przelicz!</button>
                 </p>
             </fieldset>
         </form>
