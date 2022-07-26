@@ -1,0 +1,37 @@
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.container__fieldset {
+    background-color: burlywood;
+    border-radius: 10px;
+    padding: 25px;
+    border: 2px solid teal;
+}
+
+.container__legend {
+    background-color: teal;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.container__labelText {
+    display: inline-block;
+    width: 150px;
+}
+
+.container__input {
+    width: 250px;
+}
+
+.container__button {
+    border: none;
+    background-color: teal;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator walut</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body class="body">
+    <div class="container">
+        <form class="js-form">
+            <fieldset class="container__fieldset">
+                <legend class="container__legend">Kalkulator walut</legend>
+                <p>
+                    <label>
+                        <span class="container__labelText">Kwota w PLN: </span>
+                        <input class="js-plnInput container__input" required name="amount" type="number" step="0.01"
+                            min="1" placeholder="Kwota do zamiany">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span class="container__labelText">Na jaką walutę:</span>
+                        <select class="js-newCurrency container__input" name="newCurrency" required>
+                            <option selected disabled></option>
+                            <option value="USD">Dolar amerykański ($)</option>
+                            <option value="EUR">Euro (€)</option>
+                            <option value="GBP">Funt brytyjski (£)</option>
+                            <option value="CHF">Frank szwjacarski (CHF)</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    Kwota po przeliczeniu z PLN: <strong class="js-count">N/A</strong>
+                </p>
+                <p>
+                    <button class="container__button">Przelicz!</button>
+                </p>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
