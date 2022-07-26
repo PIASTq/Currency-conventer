@@ -10,5 +10,7 @@ html {
     font-family: "Lato", sans-serif;
     font-size: 20px;
     line-height: 1.5;
-    background-color: #ddd;
+    background-color: #ccc;
+    background-image: url("../img/background-image.jpg");
+    background-size: cover;
 }
