@@ -1,9 +1,9 @@
 {
-    const currencyExchange = (amount, exchangeRate) => {
+    const exchangeCurrency = (amount, exchangeRate) => {
         return (amount / exchangeRate).toFixed(2);
     };
 
-    const countToNewCurrency = (event) => {
+    const calculateResault = (event) => {
         event.preventDefault();
 
         const EUR = 4.8;
@@ -13,7 +13,7 @@
 
         const eurSymbol = "€";
         const usdSymbol = "$";
-        const chfSymbol = " CHF";
+        const chfSymbol = "CHF";
         const gbpSymbol = "£";
 
         const newCurrencyValue = document.querySelector(".js-newCurrency").value;
@@ -22,16 +22,16 @@
 
         switch (newCurrencyValue) {
             case "EUR":
-                countElement.innerText = `${currencyExchange(plnInputValue, EUR)}${eurSymbol}`;
+                countElement.innerText = `${exchangeCurrency(plnInputValue, EUR)}${eurSymbol}`;
                 break;
             case "USD":
-                countElement.innerText = `${currencyExchange(plnInputValue, USD)}${usdSymbol}`;
+                countElement.innerText = `${exchangeCurrency(plnInputValue, USD)}${usdSymbol}`;
                 break;
             case "CHF":
-                countElement.innerText = `${currencyExchange(plnInputValue, CHF)}${chfSymbol}`;
+                countElement.innerText = `${exchangeCurrency(plnInputValue, CHF)}${chfSymbol}`;
                 break;
             case "GBP":
-                countElement.innerText = `${currencyExchange(plnInputValue, GBP)}${gbpSymbol}`;
+                countElement.innerText = `${exchangeCurrency(plnInputValue, GBP)}${gbpSymbol}`;
                 break;
         }
     };
@@ -39,7 +39,7 @@
     const init = () => {
         const formElement = document.querySelector(".js-form");
 
-        formElement.addEventListener("submit", countToNewCurrency);
+        formElement.addEventListener("submit", calculateResault);
     };
 
     init();
